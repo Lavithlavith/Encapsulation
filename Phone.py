@@ -12,6 +12,11 @@ class Phone:
         print("ROM : ", self.ROM )
         print("RAM: ",self.RAM)
         print("AndroidVersion: ",self.AndroidVersion)
+#getters get the hiden value:
+    def getPassword(self):
+        return self.__Password
+    def setPassword(self,newPassword):
+        self.__Password = newPassword
 
 
 Samsung = Phone("Samsung","16gb","128gb", "Black", "OneUi-7","something")
@@ -19,3 +24,6 @@ print(Samsung.AndroidVersion)
 print(Samsung.RAM)
 print(Samsung.ROM)
 #print(Samsung.__Password)#this will throw a error as it will not be able to find it!
+print(Samsung.getPassword())
+Samsung.setPassword("Lavith123")
+print(Samsung.getPassword())
